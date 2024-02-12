@@ -5,7 +5,7 @@
 #define COUNT_PER_THREAD 1000000
 #define NUM_THREADS 10
 
-volatile unsigned long count = 0;
+unsigned long count = 0;
 
 void *  parallel_count(void *args){
    pthread_mutex_t *p_mut_count = (pthread_mutex_t*)args;
