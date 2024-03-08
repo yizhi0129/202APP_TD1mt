@@ -19,6 +19,18 @@ int max_seq(int *tab, int nelt)
     return maxv;
 }
 
+int max_vec(int *tab, int nelt, int nthreads)
+{
+    int i, maxv;
+    int nelt_per_thread, nrest;
+    maxv = 0;
+    
+    nelt_per_thread = nelt / nthreads;
+    nrest = nelt % nthreads;
+
+    return maxv;
+}
+
 int main(int argc, char **argv)
 {
     int nthreads, nelt, i, t, maxv_seq, maxv_mt;
@@ -39,6 +51,7 @@ int main(int argc, char **argv)
     /* Recherche du max de tab en contexte multithread => maxv_mt*/
     maxv_mt = 0;
     /* A ECRIRE */
+
 
     /* Recherche du max en sequentiel pour verification => maxv_seq */
     maxv_seq = max_seq(tab, nelt);
